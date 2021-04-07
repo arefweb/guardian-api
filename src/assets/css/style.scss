@@ -1,0 +1,253 @@
+@import "grid";
+@import "general";
+
+/**************** NAVBAR ****************/
+.navbar{
+  box-shadow: 0 0 4px 0px #38456c52;
+  &__logo{
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    & img{
+      max-height: 4.375rem;
+    }
+  }
+  &__row{
+    justify-content: space-between;
+  }
+  & nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__navlist{
+    list-style: none;
+    margin: 0;
+    display: flex;
+    height: 100%;
+    padding-left: 0;
+    &-navitem{
+      display: block;
+    }
+    &-navlink{
+      text-decoration: none;
+      text-transform: uppercase;
+      display: block;
+      padding: 0 0.625rem;
+      height: 100%;
+      line-height: 4;
+      &:link{
+        color:var(--color-gray);
+      }
+      &:visited{
+        color:var(--color-gray);
+      }
+      &:hover{
+        background-color: var(--color-logo-blue);
+        color: var(--color-white);
+      }
+    }
+  }
+}
+
+/**************** HOME ****************/
+
+//------SEARCH------//
+.search{
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem 0;
+  margin: 1.25rem 0;
+
+  .search__wrapper{
+    width: 60%;
+  }
+  .search__form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & label{
+      padding-right: .625rem;
+      color: #095586;
+    }
+    &-input{
+      width: 60%;
+      padding: .625rem;
+      border-radius: 1.25rem;
+      border: 1px solid var(--color-silver);
+      &:focus{
+        outline: none;
+        box-shadow: 0 0 3px 0px #1c99d7;
+      }
+    }
+    &-btn{
+      background-color: var(--color-white);
+      border: none;
+      padding: 0.4375rem 0.5625rem;
+      border-radius: 5px;
+      margin: 5px;
+      box-shadow: 0 0 1px 1px var(--color-silver);
+      border-radius: 50%;
+      cursor: pointer;
+      & svg{
+        font-size: 16px;
+        color: var(--color-gray);
+      }
+    }
+  }
+}
+
+.search-term{
+  & p{
+    font-size: .875rem;
+  }
+  & hr{
+    color: #f4f4f454;
+  }
+}
+
+//------ARTICLES------//
+.news{
+  margin: 1rem 0;
+  &__card{
+    margin: 1rem 0;
+    box-shadow: 0 0 5px -1px #b8b9b9;
+    border-radius: 8px;
+    overflow: hidden;
+    &-img{
+      width: 100%;
+    }
+    &-content{
+      padding: 1.2rem;
+    }
+    &-date{
+      color: var(--color-gray);
+      font-style: italic;
+      font-size: .8125rem;
+    }
+    &-btn{
+      background-color: var(--color-white);
+      border: 1px solid #0a5687;
+      padding: 5px 8px;
+      border-radius: 5px;
+      color: var(--color-logo-blue);
+      transition: all .2s;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      &:hover{
+        color: var(--color-white);
+        background-color: var(--color-logo-blue);
+      }
+    }
+  }
+}
+
+//------PAGINATION------//
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  &__list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    & li{
+      display: inline-block;
+      margin: 5px;
+      border: 1px solid var(--color-logo-blue);
+      border-radius: 5px;
+      padding: 3px 12px;
+      color: var(--color-logo-blue);
+      cursor: pointer;
+      &.pagination__list-previous{
+        border: none;
+      }
+      &.pagination__list-next{
+        border: none;
+      }
+      &.pagination__list-ellipsis{
+        border: none;
+        cursor: default;
+      }
+      &.active{
+        background-color: var(--color-logo-blue);
+        color: var(--color-white);
+      }
+    }
+    
+  }
+}
+
+.pagePrev{
+  cursor: pointer;
+  line-height: 2.3rem;
+  margin-right: 0.4rem;
+  font-size: 1.5rem;
+}
+.pageNext{
+  cursor: pointer;
+  line-height: 2.3rem;
+  margin-left: 0.4rem;
+  font-size: 1.5rem;
+}
+
+/**************** ABOUT ****************/
+.about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  & a{
+    &:link, &:visited{
+      color: var(--color-logo-blue);
+    }
+  }
+}
+
+/**************** POST ****************/
+.post{
+  &__row{
+    justify-content: center;
+    margin: 2rem 1.25rem;
+  }
+  &__heading{
+    & h1{
+      text-transform: uppercase;
+    }
+  }
+  &__meta{
+    display: flex;
+    & > p{
+      margin-right: 1rem;
+    }
+    &-date{
+      color: var(--color-logo-blue);
+      font-size: 0.9rem;
+    }
+    &-url{
+      font-size: 0.9rem;
+      & a{
+        text-decoration: none;
+        color: var(--color-logo-blue);
+      }
+      
+    }
+  }
+  &__content{
+    line-height: 2;
+  }
+
+  .back{
+    margin-top: 1.2rem;
+    &__btn{
+      background-color: white;
+      border: none;
+      font-size: 1.1rem;
+      color: #0a5687;
+      cursor: pointer;
+    }
+  }
+}
+
