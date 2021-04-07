@@ -1,4 +1,4 @@
 # React App using Guardian API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You can see a live version of this app in here: [guardian-api-project](https://guardian-api-project.netlify.app/).
 
