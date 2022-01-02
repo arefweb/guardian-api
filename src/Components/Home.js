@@ -79,7 +79,7 @@ const Home = ({ query , page, articles, dispatch }) => {
         </div>
       </div>
     );
-  }
+  } 
 
   return (
     <main>
