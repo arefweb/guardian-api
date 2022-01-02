@@ -38,7 +38,7 @@ const Home = ({ query , page, articles, dispatch }) => {
   const getArticles = async () => {
     try {
       const response = await fetch(
-        `https://content.guardianapis.com/search?page-size=9&order-by=relevance&show-fields=all&page=${page.currentPage}&q=${query}&api-key=${process.env.REACT_APP_API_KEY}`
+        `https://content.guardianapis.com/search?page-size=9&order-by=relevance&show-fields=all&page=${page.currentPage}&q=${query}&api-key=7b979b22-ab7e-4d58-b00a-8c747f8fc795`
       );
       const data = await response.json();
       dispatch({ type: "SET_ARTICLES", payload: data.response.results });

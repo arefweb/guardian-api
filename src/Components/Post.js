@@ -11,7 +11,7 @@ const Post = () => {
   const getArticle = async () => {
     try {
       const response = await fetch(
-        `https://content.guardianapis.com/${id}?api-key=${process.env.REACT_APP_API_KEY}&show-fields=all`
+        `https://content.guardianapis.com/${id}?api-key=7b979b22-ab7e-4d58-b00a-8c747f8fc795&show-fields=all`
       );
       const data = await response.json();
       setArticle(data.response.content.fields);
